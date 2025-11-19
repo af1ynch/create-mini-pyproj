@@ -1,0 +1,22 @@
+# IDE config files
+.idea/
+.vscode/
+.cursor/
+.trae/
+
+# System files
+.DS_Store
+
+# Virtual environment directories
+.venv/
+venv/
+
+# Ruff
+.ruff_cache
+ruff.log
+
+# Mypy
+.mypy_cache
+
+# Pytest cache
+.pytest_cache/

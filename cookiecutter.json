@@ -1,0 +1,8 @@
+{
+    "project_name": "My Mini Py Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+    "project_description": "极简的Python项目模板，仅包含工程质量配置",
+    "author_name": "Your Name",
+    "author_email": "your.email@example.com",
+    "version": "0.0.1"
+}

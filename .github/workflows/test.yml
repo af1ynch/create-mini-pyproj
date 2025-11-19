@@ -1,0 +1,37 @@
+name: Test Template
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version-file: '.python-version'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install cookiecutter
+
+    - name: Test template generation
+      run: |
+        cookiecutter . --no-input
+
+    - name: Check generated project
+      run: |
+        cd my-mini-py-project
+        ls -la
+        python main.py | grep "Hello Python!"
