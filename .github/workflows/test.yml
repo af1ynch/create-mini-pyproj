@@ -35,6 +35,8 @@ jobs:
         cookiecutter . --no-input
 
     - name: Check generated project
+      # 在所有系统上都使用 bash shell
+      shell: bash
       run: |
         cd my-mini-py-project
         ls -la
