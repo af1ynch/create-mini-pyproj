@@ -30,7 +30,7 @@ jobs:
     - name: Test template generation
       env:
         # 强制 Python 使用 UTF-8 作为默认编码，解决 windows 上的打印问题
-        PYTHONUTF8:"1"
+        PYTHONUTF8: "1"
       run: |
         cookiecutter . --no-input
 
