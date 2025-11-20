@@ -20,3 +20,6 @@ ruff.log
 
 # Pytest cache
 .pytest_cache/
+
+# Lock file
+{{cookiecutter.project_slug}}/uv.lock
